@@ -1,5 +1,5 @@
-import  { useState } from 'react';
-import "./Login.css";
+import React, { useState } from 'react';
+import './Login.css';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -7,12 +7,26 @@ export default function Login() {
   const [message, setMessage] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email === 'test@example.com' && password === 'password123') {
-      setMessage('Login erfolgreich!');
-    } else {
-      setMessage('Ungültige Anmeldedaten!');
+    try {
+      const response = await fetch('http://localhost:3000/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.ok) {
+        setMessage('Bitte checke deine Inbox und bestätige deine E-Mail.');
+      } else {
+        const errorData = await response.json();
+        setMessage(`Registrierung fehlgeschlagen: ${errorData.error}`);
+      }
+    } catch (error) {
+      console.error('Fehler:', error);
+      setMessage('Es ist ein Fehler aufgetreten. Bitte versuche es später erneut.');
     }
   };
 
