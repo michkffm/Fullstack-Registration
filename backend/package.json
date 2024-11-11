@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "name": "backend-registration",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.0",
+    "resend": "^4.0.1-alpha.0",
+    "validator": "^13.12.0"
+  },
+  "description": ""
+}
