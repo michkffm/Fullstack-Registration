@@ -1,8 +1,10 @@
-# React + Vite
+# Registrierungsoberfläche
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-Frontend für Fullstack Registration. Die vollständige Einrichtung, Backend-Konfiguration, API-Beschreibung und Testanleitung stehen in der [Projekt-README](../README.md).
 
-Currently, two official plugins are available:
+```bash
+npm ci
+npm run dev
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Die API-Anfragen laufen relativ über `/register`; Vite leitet sie an das lokale Backend auf Port 3000 weiter. Ohne eingerichtetes Backend kann die Oberfläche geöffnet werden, aber keine echte Registrierung abschließen.

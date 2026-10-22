@@ -1,21 +1,15 @@
-# Security Policy
+# Sicherheit
 
-## Supported Versions
+Dieses Lernprojekt enthält eine Registrierung mit E-Mail-Bestätigung. Es gibt derzeit keine Anmeldung oder Benutzerverwaltung. Der Projektstand und die tatsächlich ausgeführten Prüfungen stehen in der [README](README.md).
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+## Sensible Daten
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+Keine API-Schlüssel, Datenbankzugänge, Passwörter, echten E-Mail-Adressen oder verwendbaren Bestätigungslinks in öffentliche Issues, Screenshots oder Logs übernehmen. Ein bereits veröffentlichter Schlüssel muss beim Anbieter widerrufen werden; ein nachträglicher Quelltextwechsel allein genügt nicht.
 
-## Reporting a Vulnerability
+## Probleme melden
 
-Use this section to tell people how to report a vulnerability.
+Ein GitHub-Issue kann eine allgemeine, von Geheimnissen bereinigte Fehlerbeschreibung, die betroffenen Dateien und reproduzierbare Schritte mit künstlichen Testdaten enthalten. Vertrauliche Details erst nach Vereinbarung eines geeigneten privaten Meldewegs weitergeben. Es wird hier kein privater Meldekanal und keine feste Reaktions- oder Supportfrist zugesichert.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+## Prüfgrenzen
+
+Ein erfolgreicher Build, bestandene Tests oder ein npm-Audit ohne Meldungen sind keine vollständige Sicherheitsgarantie. Vor öffentlichem Betrieb müssen echte Mailzustellung, Datenbankzugriffsrechte, HTTPS, Proxy-Konfiguration und Datenmigration geprüft werden. Historische Zugangsdaten und produktive Konfiguration gehören nicht zur bisherigen lokalen Quellprüfung.

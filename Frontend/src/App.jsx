@@ -1,12 +1,6 @@
-import Login from "./Login.jsx";
+import Registration from "./Login.jsx";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <Login />
-    </div>
-  );
+export default function App() {
+  return <Registration />;
 }
-
-export default App;
